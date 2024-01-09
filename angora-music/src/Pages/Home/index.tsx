@@ -1,12 +1,16 @@
 import React from "react";
 
-interface Props {};
+interface Props {
+    
+};
 
 const Home = (props: Props) => {
     return (
-        <p className='text-red-700'>
-            Hello world
-        </p>
+        <div className='h-screen p-8 bg-angora-white'>
+            <p className='text-angora-dark-green'>
+                Hello world
+            </p>
+        </div>
     );
 };
 

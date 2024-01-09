@@ -4,12 +4,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
 import Home from './Pages/Home';
 import reportWebVitals from './reportWebVitals';
+import Navbar from './Components/Navbar';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <BrowserRouter>
+    <Navbar/>
     <Routes>
       <Route path='/' element={<Home/>} />
     </Routes>

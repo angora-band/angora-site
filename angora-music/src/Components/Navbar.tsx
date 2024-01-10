@@ -1,9 +1,18 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { getCookieByName, setCookie, themeCookieName } from '../utils/cookies';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaRegMoon, FaRegSun } from 'react-icons/fa';
 import { images } from '../utils/images';
 import { DisplayMode } from '../types/display';
+import { GlobalNavLinkKey, globalNavLinks } from '../utils/navigation';
+
+const navLinks: { text: string; link: string }[] = Object.keys(globalNavLinks)
+	.filter((k) => k !== 'home')
+	.map((key) => ({
+		text: key.toUpperCase(),
+		link: globalNavLinks[key as GlobalNavLinkKey],
+	}));
 
 interface Props {
 	theme: DisplayMode;
@@ -12,6 +21,7 @@ interface Props {
 
 const Navbar = (props: Props) => {
 	const { theme, setTheme } = props;
+	const location = useLocation();
 
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -24,32 +34,47 @@ const Navbar = (props: Props) => {
 	}, [theme]);
 
 	return (
-		<div
-			className={`flex flex-row   ${
-				theme === 'dark' ? 'bg-angora-dark-purple' : 'bg-angora-purple'
-			}   h-8 lg:h-16   p-1 lg:p-2`}
-		>
-			<div className={`absolute lg:hidden   left-1 top-1 ${theme === 'dark' ? 'text-angora-white' : 'text-angora-black'}`}>
-				<GiHamburgerMenu size="1.5rem" /> {/* 1.5 rem is the equivalent of h-6 using tailwind */}
-			</div>
-			<img
-				src={images['logo.png']}
-				alt="Angora logo"
-				className="flex lg:absolute   h-full lg:h-12   mx-auto lg:mx-0   lg:left-2 lg:top-2"
-			/>
+		<div className='absolute w-full sticky top-0'>
 			<div
-				className={`hidden lg:flex   text-base lg:text-2xl   flex-row m-auto gap-2 ${
-					theme === 'dark' ? 'text-angora-white' : 'text-angora-black'
-				}`}
+				className={`flex flex-row   ${
+					theme === 'dark' ? 'bg-angora-dark-purple' : 'bg-angora-purple'
+				}   h-16 lg:h-24   p-2 lg:p-4`}
 			>
-				LINKS GO HERE
-			</div>
-			<div
-				className={`right-1 lg:right-2   top-1 lg:top-2   absolute border border-solid rounded-sm ${
-					theme === 'dark' ? 'text-angora-white border-angora-white' : 'text-angora-black border-angora-black'
-				}`}
-			>
-				{theme === 'dark' ? <FaRegMoon size="1.5rem" /> : <FaRegSun size="1.5rem" />}
+				<div
+					className={`absolute lg:hidden   left-2 top-2 text-angora-white cursor-pointer`}
+					onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+				>
+					<GiHamburgerMenu size='3rem' /> {/* 3 rem is the equivalent of h-12 using tailwind */}
+				</div>
+				<Link to='/' className='flex lg:absolute   h-12 lg:h-16   mx-auto lg:mx-0   lg:left-4 lg:top-4'>
+					<img src={images['logo.png']} alt='Angora logo' />
+				</Link>
+				<div className={`hidden lg:flex   text-base lg:text-2xl   flex-row m-auto gap-16 text-angora-white font-bold`}>
+					{navLinks.map((link) => {
+						const onPage = location.pathname.includes(link.link);
+						return (
+							<Link to={link.link} className={`${onPage ? 'underline' : ''}`}>
+								{link.text}
+							</Link>
+						);
+					})}
+				</div>
+				<div
+					className={`right-2 lg:right-4   top-2 lg:top-4   h-12 lg:h-16   w-12 lg:w-16   p-[7px]   text-angora-white border-angora-white absolute border border-solid rounded-lg cursor-pointer`}
+					onClick={() => {
+						if (theme === 'dark') {
+							setTheme('light');
+						} else {
+							setTheme('dark');
+						}
+					}}
+				>
+					{theme === 'dark' ? (
+						<FaRegMoon style={{ width: '100%', height: '100%' }} />
+					) : (
+						<FaRegSun style={{ width: '100%', height: '100%' }} />
+					)}
+				</div>
 			</div>
 		</div>
 	);

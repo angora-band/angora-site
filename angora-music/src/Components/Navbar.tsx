@@ -7,12 +7,10 @@ import { images } from '../utils/images';
 import { DisplayMode } from '../types/display';
 import { GlobalNavLinkKey, globalNavLinks } from '../utils/navigation';
 
-const navLinks: { text: string; link: string }[] = Object.keys(globalNavLinks)
-	.filter((k) => k !== 'home')
-	.map((key) => ({
-		text: key.toUpperCase(),
-		link: globalNavLinks[key as GlobalNavLinkKey],
-	}));
+const navLinks: { text: string; link: string }[] = Object.keys(globalNavLinks).map((key) => ({
+	text: key.toUpperCase(),
+	link: globalNavLinks[key as GlobalNavLinkKey],
+}));
 
 interface Props {
 	theme: DisplayMode;
@@ -30,7 +28,6 @@ const Navbar = (props: Props) => {
 		if (currCookie !== theme) {
 			setCookie(themeCookieName, theme);
 		}
-		console.log(document.cookie);
 	}, [theme]);
 
 	return (
@@ -55,7 +52,7 @@ const Navbar = (props: Props) => {
 					}`}
 				>
 					{navLinks.map((link) => {
-						const onPage = location.pathname.includes(link.link);
+						const onPage = location.pathname === link.link;
 						return (
 							<Link to={link.link} className={`${onPage ? 'underline' : ''}`}>
 								{link.text}

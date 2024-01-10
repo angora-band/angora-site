@@ -1,10 +1,13 @@
 import React, { useState, ReactElement } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home';
-import Navbar from './Components/Navbar/Navbar';
 import { DisplayMode } from './types/display';
 import { getCookieByName, themeCookieName } from './utils/cookies';
 import { GlobalNavLinkKey, globalNavLinks } from './utils/navigation';
+import Navbar from './Components/Navbar/Navbar';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Videos from './Pages/Videos';
+import Live from './Pages/Live';
 
 const App = () => {
 	const startingTheme = getCookieByName(themeCookieName);
@@ -15,11 +18,11 @@ const App = () => {
 			case 'home':
 				return <Home theme={theme} />;
 			case 'about':
-				return <Home theme={theme} />;
+				return <About theme={theme} />;
 			case 'videos':
-				return <Home theme={theme} />;
+				return <Videos theme={theme} />;
 			case 'live':
-				return <Home theme={theme} />;
+				return <Live theme={theme} />;
 		}
 	};
 

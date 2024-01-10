@@ -5,7 +5,7 @@ interface Props {
 	theme: DisplayMode;
 }
 
-const Home = (props: Props) => {
+const About = (props: Props) => {
 	const { theme } = props;
 
 	return (
@@ -14,9 +14,9 @@ const Home = (props: Props) => {
 				theme === 'dark' ? 'bg-angora-black' : 'bg-angora-white'
 			}`}
 		>
-			<p className={`${theme === 'dark' ? 'text-angora-green' : 'text-angora-dark-purple'} text-xl`}>HOME PAGE</p>
+			<p className={`${theme === 'dark' ? 'text-angora-green' : 'text-angora-dark-purple'} text-xl`}>ABOUT PAGE</p>
 		</div>
 	);
 };
 
-export default Home;
+export default About;

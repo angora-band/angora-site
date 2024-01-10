@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { getCookieByName, setCookie, themeCookieName } from '../utils/cookies';
+import { getCookieByName, setCookie, themeCookieName } from '../../utils/cookies';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaRegMoon, FaRegSun } from 'react-icons/fa';
-import { images } from '../utils/images';
-import { DisplayMode } from '../types/display';
-import { GlobalNavLinkKey, globalNavLinks } from '../utils/navigation';
+import { images } from '../../utils/images';
+import { DisplayMode } from '../../types/display';
+import { GlobalNavLinkKey, globalNavLinks } from '../../utils/navigation';
 
 const navLinks: { text: string; link: string }[] = Object.keys(globalNavLinks).map((key) => ({
 	text: key.toUpperCase(),

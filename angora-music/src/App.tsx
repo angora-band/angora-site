@@ -1,7 +1,7 @@
 import React, { useState, ReactElement } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
-import Navbar from './Components/Navbar';
+import Navbar from './Components/Navbar/Navbar';
 import { DisplayMode } from './types/display';
 import { getCookieByName, themeCookieName } from './utils/cookies';
 import { GlobalNavLinkKey, globalNavLinks } from './utils/navigation';

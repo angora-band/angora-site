@@ -19,4 +19,10 @@ module.exports = {
 		},
 	},
 	plugins: [],
+  safelist: [
+    'border-angora-purple',
+    'border-angora-dark-purple',
+    'border-angora-green',
+    'border-angora-dark-green'
+  ]
 };

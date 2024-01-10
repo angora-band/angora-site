@@ -1,5 +1,6 @@
 import React from 'react';
 import { DisplayMode } from '../../types/display';
+import DualColorContainer from '../../Components/Containers/DualColorContainer';
 
 interface Props {
 	theme: DisplayMode;
@@ -14,7 +15,9 @@ const Home = (props: Props) => {
 				theme === 'dark' ? 'bg-angora-black' : 'bg-angora-white'
 			}`}
 		>
-			<p className={`${theme === 'dark' ? 'text-angora-green' : 'text-angora-dark-purple'} text-xl`}>HOME PAGE</p>
+			<DualColorContainer theme={theme}>
+				<p className={`${theme === 'dark' ? 'text-angora-dark-white' : 'text-angora-black'} text-xl`}>HOME PAGE</p>
+			</DualColorContainer>
 		</div>
 	);
 };

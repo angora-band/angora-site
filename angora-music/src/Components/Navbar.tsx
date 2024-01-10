@@ -34,10 +34,10 @@ const Navbar = (props: Props) => {
 	}, [theme]);
 
 	return (
-		<div className='absolute w-full sticky top-0'>
+		<div className='sticky w-full top-0'>
 			<div
 				className={`flex flex-row   ${
-					theme === 'dark' ? 'bg-angora-dark-purple' : 'bg-angora-purple'
+					theme === 'dark' ? 'bg-angora-dark-black' : 'bg-angora-dark-white'
 				}   h-16 lg:h-24   p-2 lg:p-4`}
 			>
 				<div
@@ -49,7 +49,11 @@ const Navbar = (props: Props) => {
 				<Link to='/' className='flex lg:absolute   h-12 lg:h-16   mx-auto lg:mx-0   lg:left-4 lg:top-4'>
 					<img src={images['logo.png']} alt='Angora logo' />
 				</Link>
-				<div className={`hidden lg:flex   text-base lg:text-2xl   flex-row m-auto gap-16 text-angora-white font-bold`}>
+				<div
+					className={`hidden lg:flex   text-base lg:text-2xl   flex-row m-auto gap-16 font-bold ${
+						theme === 'dark' ? 'text-angora-white' : 'text-angora-black'
+					}`}
+				>
 					{navLinks.map((link) => {
 						const onPage = location.pathname.includes(link.link);
 						return (
@@ -60,7 +64,9 @@ const Navbar = (props: Props) => {
 					})}
 				</div>
 				<div
-					className={`right-2 lg:right-4   top-2 lg:top-4   h-12 lg:h-16   w-12 lg:w-16   p-[7px]   text-angora-white border-angora-white absolute border border-solid rounded-lg cursor-pointer`}
+					className={`right-2 lg:right-4   top-2 lg:top-4   h-12 lg:h-16   w-12 lg:w-16   p-[7px]   absolute border border-solid rounded-lg cursor-pointer ${
+						theme === 'dark' ? 'text-angora-white border-angora-white' : 'text-angora-black border-angora-black'
+					}`}
 					onClick={() => {
 						if (theme === 'dark') {
 							setTheme('light');

@@ -5,7 +5,9 @@ module.exports = {
 		extend: {
 			colors: {
 				'angora-white': '#f8f8f0',
+        'angora-dark-white': '#e0e0d8',
 				'angora-black': '#182028',
+        'angora-dark-black': '#081018',
 				'angora-purple': '#9818b8',
 				'angora-dark-purple': '#5b1470',
 				'angora-green': '#18c058',

@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { getCookieByName, setCookie, themeCookieName } from '../../utils/cookies';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { ImCross } from 'react-icons/im';
 import { FaRegMoon, FaRegSun } from 'react-icons/fa';
 import { images } from '../../utils/images';
 import { DisplayMode } from '../../types/display';
 import { GlobalNavLinkKey, globalNavLinks } from '../../utils/navigation';
+import { NamedLink } from '../../types/navigation';
+import MobileSlidingMenu from './MobileSlidingMenu';
 
-const navLinks: { text: string; link: string }[] = Object.keys(globalNavLinks).map((key) => ({
+const navLinks: NamedLink[] = Object.keys(globalNavLinks).map((key) => ({
 	text: key.toUpperCase(),
 	link: globalNavLinks[key as GlobalNavLinkKey],
 }));
@@ -38,23 +41,26 @@ const Navbar = (props: Props) => {
 				}   h-16 lg:h-24   p-2 lg:p-4`}
 			>
 				<div
-					className={`absolute lg:hidden   left-2 top-2 text-angora-white cursor-pointer`}
+					className={`absolute lg:hidden   left-2 top-2 cursor-pointer z-10 ${
+						theme === 'dark' ? 'text-angora-dark-white' : 'text-angora-black'
+					}`}
 					onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
 				>
-					<GiHamburgerMenu size='3rem' /> {/* 3 rem is the equivalent of h-12 using tailwind */}
+					{/* 3 rem is the equivalent of h-12 using tailwind */}
+					{mobileMenuOpen ? <ImCross size='3rem' /> : <GiHamburgerMenu size='3rem' />}
 				</div>
 				<Link to='/' className='flex lg:absolute   h-12 lg:h-16   mx-auto lg:mx-0   lg:left-4 lg:top-4'>
 					<img src={images['logo.png']} alt='Angora logo' />
 				</Link>
 				<div
 					className={`hidden lg:flex   text-base lg:text-2xl   flex-row m-auto gap-16 font-bold ${
-						theme === 'dark' ? 'text-angora-white' : 'text-angora-black'
+						theme === 'dark' ? 'text-angora-dark-white' : 'text-angora-black'
 					}`}
 				>
 					{navLinks.map((link) => {
 						const onPage = location.pathname === link.link;
 						return (
-							<Link to={link.link} className={`${onPage ? 'underline' : ''}`}>
+							<Link to={link.link} className={`${onPage ? 'underline' : ''}`} key={link.text}>
 								{link.text}
 							</Link>
 						);
@@ -62,7 +68,9 @@ const Navbar = (props: Props) => {
 				</div>
 				<div
 					className={`right-2 lg:right-4   top-2 lg:top-4   h-12 lg:h-16   w-12 lg:w-16   p-[7px]   absolute border border-solid rounded-lg cursor-pointer ${
-						theme === 'dark' ? 'text-angora-white border-angora-white' : 'text-angora-black border-angora-black'
+						theme === 'dark'
+							? 'text-angora-dark-white border-angora-dark-white'
+							: 'text-angora-black border-angora-black'
 					}`}
 					onClick={() => {
 						if (theme === 'dark') {
@@ -79,6 +87,7 @@ const Navbar = (props: Props) => {
 					)}
 				</div>
 			</div>
+			<MobileSlidingMenu show={mobileMenuOpen} setShow={setMobileMenuOpen} theme={theme} links={navLinks} />
 		</div>
 	);
 };

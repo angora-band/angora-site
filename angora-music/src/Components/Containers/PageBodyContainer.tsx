@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import { DisplayMode } from '../../types/display';
-import SimpleFooter from '../Footer/SimpleFooter';
+import Footer from '../Footer/Footer';
 
 interface Props extends PropsWithChildren {
 	theme: DisplayMode;
@@ -17,7 +17,7 @@ const PageBodyContainer = (props: Props) => {
 			} flex flex-col`}
 		>
 			<div className={`p-4 lg:p-8   gap-12 lg:gap-20   flex flex-col`}>{children}</div>
-			{simpleFooter ? <SimpleFooter /> : <div />}
+			{<Footer simplify={simpleFooter} />}
 		</div>
 	);
 };

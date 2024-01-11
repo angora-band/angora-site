@@ -34,14 +34,14 @@ const Navbar = (props: Props) => {
 	}, [theme]);
 
 	return (
-		<div className='sticky w-full top-0'>
+		<div className='sticky w-full top-0 z-10'>
 			<div
 				className={`flex flex-row   ${
 					theme === 'dark' ? 'bg-angora-dark-black' : 'bg-angora-dark-white'
 				}   h-16 lg:h-24   p-2 lg:p-4`}
 			>
 				<div
-					className={`absolute lg:hidden   left-2 top-2 cursor-pointer z-10 ${
+					className={`absolute lg:hidden   left-2 top-2 cursor-pointer z-20 ${
 						theme === 'dark' ? 'text-angora-dark-white' : 'text-angora-black'
 					}`}
 					onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

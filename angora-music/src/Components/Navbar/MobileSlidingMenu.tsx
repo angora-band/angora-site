@@ -23,7 +23,7 @@ const MobileSlidingMenu = (props: Props) => {
 
 	return (
 		<div
-			className={`fixed w-full h-full top-0 ${
+			className={`lg:hidden fixed w-full h-full top-0 ${
 				show ? 'bg-angora-dark-black/50 left-0' : 'transparent -left-[100vw]'
 			} transition-all duration-500`}
 		>

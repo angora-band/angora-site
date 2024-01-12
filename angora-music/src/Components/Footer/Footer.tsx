@@ -11,7 +11,7 @@ const Footer = (props: Props) => {
 	return (
         <div className='p-4 lg:p-8   gap-4 lg:gap-8   flex flex-col w-full mt-auto bg-angora-dark-black text-angora-dark-white text-sm'>
             {!simplify && (
-                <div className='mx-8 lg:mx-16   flex flex-row justify-evenly items-center'>
+                <div className='lg:w-1/3   mx-8 lg:mx-auto   flex flex-row justify-evenly items-center'>
                     {Object.keys(streamingPlatformLinks).map((key) => (
                         <a
                             href={streamingPlatformLinks[key as StreamingPlatformLinkKey]}
@@ -19,7 +19,7 @@ const Footer = (props: Props) => {
                             rel='noopener noreferrer'
                             className='w-8 lg:w-12   h-8 lg:h-12'
                         >
-                            <img src={images[key + '.png']} alt={key} />
+                            <img src={images[key + '.png']} alt={key} className='grayscale hover:grayscale-0' />
                         </a>
                     ))}
                 </div>

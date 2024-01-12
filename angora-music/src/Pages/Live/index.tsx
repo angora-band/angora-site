@@ -87,7 +87,7 @@ const Live = (props: Props) => {
 				);
 			})}
 			<div className='my-8 lg:my-16   gap-4 lg:gap-8   flex flex-col'>
-				<p className='text-6xl lg:text-8xl   flex mx-auto justify-center text-center'>
+				<p className='text-4xl lg:text-8xl   flex mx-auto justify-center text-center'>
 					Want to book us?
 				</p>
 				<p className='text-xl lg:text-2xl   flex mx-auto justify-center text-center'>

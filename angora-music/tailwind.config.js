@@ -16,6 +16,9 @@ module.exports = {
 			boxShadow: {
 				full: '100vh 100vw 100vh 100vw rgba(0, 0, 0, 0.3)',
 			},
+			screens: {
+				'3xl': '1920px'
+			}
 		},
 	},
 	plugins: [],

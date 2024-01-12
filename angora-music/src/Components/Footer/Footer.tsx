@@ -29,7 +29,7 @@ const Footer = (props: Props) => {
                     Contact us
                 </a>
                 <p className='flex my-auto'>
-                    © 2023 somethingsomething
+                    © 2024 somethingsomething
                 </p>
             </div>
         </div>

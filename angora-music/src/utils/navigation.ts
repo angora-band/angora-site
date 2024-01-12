@@ -16,3 +16,10 @@ export const streamingPlatformLinks = {
     'youtube-music': 'https://music.youtube.com',
     'apple-music': 'https://music.apple.com'
 }
+
+export type SocialMediaLinkKey = 'instagram' | 'tiktok';
+
+export const socialMediaLinks = {
+    'instagram': 'https://www.instagram.com/itsangora/',
+    'tiktok': 'https://tiktok.com'
+}

@@ -16,7 +16,7 @@ const PageBodyContainer = (props: Props) => {
 				theme === 'dark' ? 'bg-angora-black text-angora-dark-white' : 'bg-angora-white text-angora-black'
 			} flex flex-col`}
 		>
-			<div className={`p-4 lg:p-8   gap-12 lg:gap-20   flex flex-col`}>{children}</div>
+			<div className={`p-4 lg:p-8   gap-8 lg:gap-20   flex flex-col`}>{children}</div>
 			{<Footer simplify={simpleFooter} />}
 		</div>
 	);

@@ -88,15 +88,11 @@ const Live = (props: Props) => {
 			})}
 			<div className='my-8 lg:my-16   gap-4 lg:gap-8   flex flex-col'>
 				<p className='text-4xl lg:text-8xl   flex mx-auto justify-center text-center'>
-					Want to book us?
+					BOOK US
 				</p>
-				<p className='text-xl lg:text-2xl   flex mx-auto justify-center text-center'>
-					Email us at&nbsp;
-					<a href='mailto:angora@gmail.com' className='underline'>
-						angora@gmail.com
-					</a>
-					&nbsp;to talk shop!
-				</p>
+				<a href='mailto:angora@gmail.com' className='text-xl lg:text-2xl   inline-block mx-auto justify-center text-center underline'>
+					angora@gmail.com
+				</a>
 			</div>
 		</PageBodyContainer>
 	);

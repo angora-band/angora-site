@@ -29,7 +29,7 @@ const Home = (props: Props) => {
 					</div>
 				</div>
 			</DualColorContainer>
-			<div className='mx-8 lg:mx-16   flex flex-row justify-between items-center'>
+			<div className='mx-8 lg:mx-16   flex flex-row justify-evenly items-center'>
 				{Object.keys(streamingPlatformLinks).map((key) => (
 					<a
 						href={streamingPlatformLinks[key as StreamingPlatformLinkKey]}

@@ -11,7 +11,7 @@ const Footer = (props: Props) => {
 	return (
         <div className='p-4 lg:p-8   gap-4 lg:gap-8   flex flex-col w-full mt-auto bg-angora-dark-black text-angora-dark-white text-sm'>
             {!simplify && (
-                <div className='mx-8 lg:mx-16   flex flex-row justify-between items-center'>
+                <div className='mx-8 lg:mx-16   flex flex-row justify-evenly items-center'>
                     {Object.keys(streamingPlatformLinks).map((key) => (
                         <a
                             href={streamingPlatformLinks[key as StreamingPlatformLinkKey]}

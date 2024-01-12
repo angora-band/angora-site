@@ -27,7 +27,7 @@ const About = (props: Props) => {
 				vel, cursus nec nisi. Praesent eu ultrices lacus, vitae congue ex. Vivamus vitae malesuada nibh. Praesent id nisi
 				quam. Curabitur rhoncus nibh sed sem vestibulum, fermentum aliquet nulla tristique.
 			</p>
-			<div className='flex flex-row justify-between items-center w-2/3 mx-auto'>
+			<div className='w-full lg:w-2/3   flex flex-row justify-evenly items-center mx-auto'>
 				{Object.keys(socialMediaLinks).map((key) => (
 					<a
 						href={socialMediaLinks[key as SocialMediaLinkKey]}

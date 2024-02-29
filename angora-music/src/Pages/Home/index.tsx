@@ -16,13 +16,15 @@ const Home = (props: Props) => {
 		<PageBodyContainer theme={theme} simpleFooter>
 			<DualColorContainer theme={theme}>
 				<div className='gap-12 lg:gap-20   flex-col lg:flex-row   flex items-center'>
-					<img src={images['in-the-static-ep-cover.jpg']} alt='EP cover for "in the static"' className='w-3/4 lg:w-1/3   h-3/4 lg:h-1/3   flex' />
+					<img
+						src={images['in-the-static-ep-cover.jpg']}
+						alt='EP cover for "in the static"'
+						className='w-3/4 lg:w-1/3   h-3/4 lg:h-1/3   flex'
+					/>
 					<div className='gap-4 lg:gap-8   flex flex-col'>
-						<p className='text-4xl lg:text-6xl'> SPRING 2024 </p>
+						<p className='text-4xl lg:text-6xl   font-semibold'> in the static </p>
 						<p className='text-lg lg:text-2xl'>
-							Stream our debut EP,&nbsp;
-							<i>in the static</i>,&nbsp;
-							when it releases on all major streaming platforms this spring.
+							One new band. Five new songs. Coming to all streaming platforms this Spring. Long Live The Rabbit.
 						</p>
 					</div>
 				</div>

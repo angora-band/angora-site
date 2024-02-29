@@ -1,7 +1,7 @@
 import React from 'react';
 import { DisplayMode } from '../../types/display';
 import PageBodyContainer from '../../Components/Containers/PageBodyContainer';
-import { videos } from '../../utils/videos';
+// import { videos } from '../../utils/videos';
 import DualColorContainer from '../../Components/Containers/DualColorContainer';
 
 interface Props {

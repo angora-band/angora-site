@@ -21,5 +21,5 @@ export type SocialMediaLinkKey = 'instagram' | 'tiktok';
 
 export const socialMediaLinks = {
     'instagram': 'https://www.instagram.com/itsangora/',
-    'tiktok': 'https://tiktok.com'
+    'tiktok': 'https://tiktok.com/@itsangora'
 }

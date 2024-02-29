@@ -16,16 +16,18 @@ const About = (props: Props) => {
 		<PageBodyContainer theme={theme}>
 			<p className='text-6xl lg:text-8xl   flex mx-auto font-bold'>IT'S ANGORA</p>
 			<DualColorContainer theme={theme} flip>
-				<img src={images['band-pic.png']} alt='The music duo themselves' className='flex m-auto' />
+				<img src={images['band-pic.jpg']} alt='The music duo themselves' className='flex m-auto' />
 			</DualColorContainer>
-			<p className='text-4xl lg:text-6xl   flex mx-auto font-semibold'>Aaron + Sabine</p>
-			<p className='text-2xl lg:text-3xl   flex mx-auto'>Baltimore ⟹ NYC</p>
-			<p className='text-2xl lg:text-3xl   flex mx-auto'>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-				euismod in lacus quis viverra. Integer laoreet laoreet nisi, nec sodales nisi egestas sit amet. Suspendisse sed
-				pulvinar sem, quis ultrices sapien. In hac habitasse platea dictumst. Cras arcu risus, consectetur id efficitur
-				vel, cursus nec nisi. Praesent eu ultrices lacus, vitae congue ex. Vivamus vitae malesuada nibh. Praesent id nisi
-				quam. Curabitur rhoncus nibh sed sem vestibulum, fermentum aliquet nulla tristique.
+			<p className='text-4xl lg:text-6xl   flex mx-auto font-semibold'>Aaron & Sabine</p>
+			<p className='text-2xl lg:text-3xl   mx-auto'>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+				<span className='font-semibold'>angora</span> is a new band based in NYC consisting of lifelong friends
+				Sabine Kearley and Aaron Morrison. Their unique style of ethereal art pop combines influences from their eclectic
+				personal tastes, experience in classical music schools, and their time making music together in Baltimore as they
+				were growing up. They are influenced by all of the music they have ever fallen in love with, with Weyes Blood,
+				Björk, Caroline Polachek, Stereolab, and Jockstrap being their primary north stars. After years of swapping demos
+				and eventually relocating to the New York City area to record in the same space, angora is finally releasing their
+				debut EP "in the static" this spring.
 			</p>
 			<div className='w-full lg:w-2/3   flex flex-row justify-evenly items-center mx-auto'>
 				{Object.keys(socialMediaLinks).map((key) => (

@@ -29,7 +29,7 @@ const Footer = (props: Props) => {
                     Contact us
                 </a>
                 <p className='flex my-auto'>
-                    Copyright © 2024 somethingsomething
+                    Copyright © 2024 Aaron Morrison, Sabine Kearley
                 </p>
             </div>
         </div>

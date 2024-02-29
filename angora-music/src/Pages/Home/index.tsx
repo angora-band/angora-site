@@ -16,15 +16,13 @@ const Home = (props: Props) => {
 		<PageBodyContainer theme={theme} simpleFooter>
 			<DualColorContainer theme={theme}>
 				<div className='gap-12 lg:gap-20   flex-col lg:flex-row   flex items-center'>
-					<img src={images['album-cover.png']} alt='Album cover' className='flex w-1/2 h-1/2' />
+					<img src={images['in-the-static-ep-cover.jpg']} alt='EP cover for "in the static"' className='flex   w-3/4 lg:w-1/3   h-3/4 lg:h-1/3' />
 					<div className='gap-4 lg:gap-8   flex flex-col'>
-						<p className='text-4xl lg:text-6xl'> OUT NOW </p>
+						<p className='text-4xl lg:text-6xl'> SPRING 2024 </p>
 						<p className='text-lg lg:text-2xl'>
-							Stream our first album albumnamehere Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-							quis nisi orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-							Vestibulum quis mattis est. Sed at massa neque. Suspendisse non nibh neque. Duis orci diam, dignissim
-							sit amet aliquet vehicula, consectetur sed dolor. Maecenas lectus elit, consequat nec sapien at,
-							tincidunt consequat elit.
+							Stream our debut EP,&nbsp;
+							<i>in the static</i>,&nbsp;
+							when it releases on all major streaming platforms this spring.
 						</p>
 					</div>
 				</div>

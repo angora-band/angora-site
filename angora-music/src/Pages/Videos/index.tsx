@@ -13,7 +13,14 @@ const Videos = (props: Props) => {
 
 	return (
 		<PageBodyContainer theme={theme}>
-			{videos.map((video, ind) => (
+			<DualColorContainer theme={theme}>
+				<div className='flex flex-col justify-center items-center'>
+					<p className='text-4xl lg:text-8xl   flex mx-auto'>COMING SOON</p>
+					<p className='text-xl lg:text-2xl   flex mx-auto'>Stay tuned...</p>
+				</div>
+			</DualColorContainer>
+			{/* STRUCTURE FOR WHEN VIDEOS ARE READY: */}
+			{/* {videos.map((video, ind) => (
 				<DualColorContainer theme={theme} flip={ind % 2 === 1}>
 					<iframe
 						className='w-[19.2rem] lg:w-[38.4rem]   h-[10.8rem] lg:h-[21.6rem]   mx-auto'
@@ -23,11 +30,11 @@ const Videos = (props: Props) => {
 						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 						allowFullScreen
 					/>
-					<p className='max-w-3/4 lg:max-w-1/3   text-xl lg:text-2xl   flex justify-center mt-2 text-center'>
+					<p className='max-w-3/4 lg:max-w-1/3   text-xl lg:text-2xl   flex justify-center mt-2'>
 						{video.title}
 					</p>
 				</DualColorContainer>
-			))}
+			))} */}
 		</PageBodyContainer>
 	);
 };

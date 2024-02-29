@@ -13,7 +13,14 @@ const Live = (props: Props) => {
 
 	return (
 		<PageBodyContainer theme={theme}>
-			{liveShows.map((live, ind) => {
+			<DualColorContainer theme={theme}>
+				<div className='flex flex-col justify-center items-center'>
+					<p className='text-4xl lg:text-8xl   flex mx-auto'>COMING SOON</p>
+					<p className='text-xl lg:text-2xl   flex mx-auto'>Stay tuned...</p>
+				</div>
+			</DualColorContainer>
+			{/* STRUCTURE FOR WHEN LIVE SHOWS ARE READY: */}
+			{/* {liveShows.map((live, ind) => {
 				const tourDatePairs: (SingleLiveShow | SingleLiveShow[])[] = [];
 				if (live.type === 'tour') {
 					for (let i = 0; i < live.locations.length; i += 2) {
@@ -85,7 +92,7 @@ const Live = (props: Props) => {
 						</div>
 					</DualColorContainer>
 				);
-			})}
+			})} */}
 			<div className='my-8 lg:my-16   gap-4 lg:gap-8   flex flex-col'>
 				<p className='text-4xl lg:text-8xl   flex mx-auto justify-center text-center'>
 					BOOK US

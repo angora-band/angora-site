@@ -25,7 +25,7 @@ const Footer = (props: Props) => {
                 </div>
             )}
             <div className='flex flex-row items-center justify-between'>
-                <a href='mailto:angora@gmail.com' className='flex my-auto underline'>
+                <a href='mailto:its@angora.band' className='flex my-auto underline'>
                     Contact us
                 </a>
                 <p className='flex my-auto'>

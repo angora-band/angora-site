@@ -50,7 +50,10 @@ const Navbar = (props: Props) => {
 					{mobileMenuOpen ? <ImCross size='3rem' /> : <GiHamburgerMenu size='3rem' />}
 				</div>
 				<Link to='/' className='flex lg:absolute   h-12 lg:h-16   mx-auto lg:mx-0   lg:left-4 lg:top-4'>
-					<img src={images['logo.png']} alt='Angora logo' />
+					<img
+						src={images[theme === 'dark' ? 'angora-static-white.gif' : 'angora-static-black.gif']}
+						alt='Angora static logo'
+					/>
 				</Link>
 				<div
 					className={`hidden lg:flex   text-base lg:text-2xl   flex-row m-auto gap-16 font-bold ${

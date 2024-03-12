@@ -9,4 +9,4 @@ const importImages = (require: __WebpackModuleApi.RequireContext) =>
 		return prev;
 	}, emptyObj);
 
-export const images = importImages(require.context('../assets/images', false, /\.(png|jpe?g)$/));
+export const images = importImages(require.context('../assets/images', false, /\.(png|jpe?g|gif)$/));

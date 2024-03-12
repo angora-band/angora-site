@@ -96,10 +96,10 @@ const Live = (props: Props) => {
 			<div className='my-8 lg:my-16   gap-4 lg:gap-8   flex flex-col'>
 				<p className='text-4xl lg:text-8xl   flex mx-auto justify-center text-center'>BOOK US</p>
 				<a
-					href='mailto:angora@gmail.com'
+					href='mailto:its@angora.band'
 					className='text-xl lg:text-2xl   inline-block mx-auto justify-center text-center underline'
 				>
-					angora@gmail.com
+					its@angora.band
 				</a>
 			</div>
 		</PageBodyContainer>

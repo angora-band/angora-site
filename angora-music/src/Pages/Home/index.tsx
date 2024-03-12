@@ -24,7 +24,7 @@ const Home = (props: Props) => {
 					<div className='gap-4 lg:gap-8   flex flex-col'>
 						<p className='text-4xl lg:text-6xl   font-semibold'> in the static </p>
 						<p className='text-lg lg:text-2xl'>
-							One new band. Five new songs. Coming to all streaming platforms this Spring. Long Live The Rabbit.
+							One new band. Five new songs. Coming to all streaming platforms this April. Long Live The Rabbit.
 						</p>
 					</div>
 				</div>

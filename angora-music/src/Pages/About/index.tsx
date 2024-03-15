@@ -63,6 +63,17 @@ const About = (props: Props) => {
 					</a>
 				))}
 			</div>
+			<p className='text-3xl lg:text-4xl   justify-center text-center mx-auto'>
+				What We're Listening To
+			</p>
+			<div className='w-full xl:w-2/3   justify-center mx-auto'>
+				{theme === 'dark' ? (
+					<iframe title='dark-playlist' style={{ borderRadius: '12px' }} src='https://open.spotify.com/embed/playlist/05WAt1KAiBuuNnUsLqB0jy?utm_source=generator&theme=0' width='100%' height='352' frameBorder='0' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy' />
+				) : (
+					<iframe title='light-playlist' className='lg:max-w-2/3' style={{ borderRadius: '12px' }} src='https://open.spotify.com/embed/playlist/05WAt1KAiBuuNnUsLqB0jy?utm_source=generator' width='100%' height='352' frameBorder='0' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy' />
+					
+				)}
+			</div>
 		</PageBodyContainer>
 	);
 };

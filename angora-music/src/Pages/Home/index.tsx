@@ -26,6 +26,10 @@ const Home = (props: Props) => {
 						<p className='text-lg lg:text-2xl'>
 							One new band. Five new songs. Coming to all streaming platforms this April. Long Live The Rabbit.
 						</p>
+						<br/>
+						<p className='text-lg lg:text-2xl'>
+							The project's first single, 'entwine', releases everywhere 4/5.
+						</p>
 					</div>
 				</div>
 			</DualColorContainer>

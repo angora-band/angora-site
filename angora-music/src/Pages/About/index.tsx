@@ -49,7 +49,7 @@ const About = (props: Props) => {
 				influenced by all of the music they have ever fallen in love with, with Weyes Blood, Björk, Caroline Polachek,
 				Stereolab, and Jockstrap being their primary north stars. After years of swapping demos and eventually relocating
 				to the New York City area to record in the same space, angora is finally releasing their debut EP "in the static"
-				this April.
+				April 19th.
 			</p>
 			<div className='w-full lg:w-2/3   flex flex-row justify-evenly items-center mx-auto'>
 				{Object.keys(socialMediaLinks).map((key) => (
@@ -71,7 +71,6 @@ const About = (props: Props) => {
 					<iframe title='dark-playlist' style={{ borderRadius: '12px' }} src='https://open.spotify.com/embed/playlist/05WAt1KAiBuuNnUsLqB0jy?utm_source=generator&theme=0' width='100%' height='352' frameBorder='0' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy' />
 				) : (
 					<iframe title='light-playlist' className='lg:max-w-2/3' style={{ borderRadius: '12px' }} src='https://open.spotify.com/embed/playlist/05WAt1KAiBuuNnUsLqB0jy?utm_source=generator' width='100%' height='352' frameBorder='0' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy' />
-					
 				)}
 			</div>
 		</PageBodyContainer>

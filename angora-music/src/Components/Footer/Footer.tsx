@@ -18,6 +18,7 @@ const Footer = (props: Props) => {
                             target='_blank'
                             rel='noopener noreferrer'
                             className='w-8 lg:w-12   h-8 lg:h-12'
+                            key={key}
                         >
                             <img src={images[key + '.png']} alt={key} className='grayscale hover:grayscale-0' />
                         </a>

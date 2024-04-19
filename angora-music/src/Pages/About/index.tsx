@@ -35,21 +35,13 @@ const About = (props: Props) => {
 			</DualColorContainer>
 			<p className='text-xl lg:text-2xl   mx-auto'>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<span className='font-semibold'>angora</span> is a new band based in NYC consisting of lifelong friends Sabine
-				Kearley (
-				<a href='mailto:sabine@angora.band' className='underline'>
-					sabine@angora.band
-				</a>
-				) and Aaron Morrison (
-				<a href='mailto:aaron@angora.band' className='underline'>
-					aaron@angora.band
-				</a>
-				). Their unique style of ethereal art pop combines influences from their eclectic personal tastes, experience in
-				classical music schools, and their time making music together in Baltimore as they were growing up. They are
-				influenced by all of the music they have ever fallen in love with, with Weyes Blood, Björk, Caroline Polachek,
-				Stereolab, and Jockstrap being their primary north stars. After years of swapping demos and eventually relocating
-				to the New York City area to record in the same space, angora is finally releasing their debut EP "in the static"
-				April 19th.
+				<span className='font-semibold'>angora</span> is a new band based in Brooklyn consisting of vocalist and
+				songwriter Sabine Kearley, and composer and producer Aaron Morrison. Their unique style of ethereal art pop
+				combines influences from their eclectic personal tastes, experience in classical music schools, and their time
+				making music together in Baltimore as they were growing up. They are continuously influenced by all of the music
+				they have ever fallen in love with, including their primary north stars Weyes Blood, Jockstrap, Caroline Polachek,
+				Stereolab, and Wye Oak. After years of remote collaboration and eventually relocating to the NYC area to record in
+				the same space, angora is finally making their debut with the 5-track “in the static” EP.
 			</p>
 			<div className='w-full lg:w-2/3   flex flex-row justify-evenly items-center mx-auto'>
 				{Object.keys(socialMediaLinks).map((key) => (
@@ -63,14 +55,32 @@ const About = (props: Props) => {
 					</a>
 				))}
 			</div>
-			<p className='text-3xl lg:text-4xl   justify-center text-center mx-auto'>
-				What We're Listening To
-			</p>
+			<p className='text-3xl lg:text-4xl   justify-center text-center mx-auto'>What We're Listening To</p>
+			{/* spotify playlist iframe insert: */}
 			<div className='w-full xl:w-2/3   justify-center mx-auto'>
 				{theme === 'dark' ? (
-					<iframe title='dark-playlist' style={{ borderRadius: '12px' }} src='https://open.spotify.com/embed/playlist/05WAt1KAiBuuNnUsLqB0jy?utm_source=generator&theme=0' width='100%' height='352' frameBorder='0' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy' />
+					<iframe
+						title='dark-playlist'
+						style={{ borderRadius: '12px' }}
+						src='https://open.spotify.com/embed/playlist/05WAt1KAiBuuNnUsLqB0jy?utm_source=generator&theme=0'
+						width='100%'
+						height='352'
+						frameBorder='0'
+						allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+						loading='lazy'
+					/>
 				) : (
-					<iframe title='light-playlist' className='lg:max-w-2/3' style={{ borderRadius: '12px' }} src='https://open.spotify.com/embed/playlist/05WAt1KAiBuuNnUsLqB0jy?utm_source=generator' width='100%' height='352' frameBorder='0' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture' loading='lazy' />
+					<iframe
+						title='light-playlist'
+						className='lg:max-w-2/3'
+						style={{ borderRadius: '12px' }}
+						src='https://open.spotify.com/embed/playlist/05WAt1KAiBuuNnUsLqB0jy?utm_source=generator'
+						width='100%'
+						height='352'
+						frameBorder='0'
+						allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'
+						loading='lazy'
+					/>
 				)}
 			</div>
 		</PageBodyContainer>

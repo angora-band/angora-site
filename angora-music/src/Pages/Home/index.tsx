@@ -2,7 +2,7 @@ import React from 'react';
 import { DisplayMode } from '../../types/display';
 import DualColorContainer from '../../Components/Containers/DualColorContainer';
 import { images } from '../../utils/images';
-import { StreamingPlatformLinkKey, entwineLinks, streamingPlatformLinks } from '../../utils/navigation';
+import { StreamingPlatformLinkKey, streamingPlatformLinks } from '../../utils/navigation';
 import PageBodyContainer from '../../Components/Containers/PageBodyContainer';
 
 interface Props {
@@ -15,27 +15,6 @@ const Home = (props: Props) => {
 	return (
 		<PageBodyContainer theme={theme} simpleFooter>
 			<DualColorContainer theme={theme}>
-				<div className='flex-col lg:flex-row   mx-4 lg:mx-16   flex gap-8 justify-evenly items-center'>
-					<div className='hidden xl:block   w-0 xl:w-1/6' />
-					<p className='text-3xl lg:text-6xl   text-center'>
-						entwine out now
-					</p>
-					<div className='w-full lg:w-1/4   flex flex-row my-auto justify-evenly items-center'>
-						{Object.keys(entwineLinks).map((key) => (
-							<a
-								href={entwineLinks[key as StreamingPlatformLinkKey]}
-								target='_blank'
-								rel='noopener noreferrer'
-								className='w-20 3xl:w-40   h-20 3xl:h-40   items-center'
-							>
-								<img src={images[key + '.png']} alt={'entwine on ' + key} />
-							</a>
-						))}
-					</div>
-					<div className='hidden xl:block   w-0 xl:w-1/6' />
-				</div>
-			</DualColorContainer>
-			<DualColorContainer theme={theme}>
 				<div className='gap-12 lg:gap-20   flex-col lg:flex-row   flex items-center'>
 					<img
 						src={images['in-the-static-ep-cover.jpg']}
@@ -45,7 +24,7 @@ const Home = (props: Props) => {
 					<div className='gap-4 lg:gap-8   flex flex-col'>
 						<p className='text-4xl lg:text-6xl   font-semibold'> in the static </p>
 						<p className='text-lg lg:text-2xl'>
-							One new band. Five new songs. Coming to all streaming platforms April 19th. Long Live The Rabbit.
+							One new band. Five new songs. Available on all streaming platforms now. Long Live The Rabbit.
 						</p>
 						<br/>
 					</div>

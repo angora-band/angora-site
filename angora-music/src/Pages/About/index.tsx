@@ -1,20 +1,16 @@
 import React from 'react';
-import { DisplayMode } from '../../types/display';
 import PageBodyContainer from '../../Components/Containers/PageBodyContainer';
 import DualColorContainer from '../../Components/Containers/DualColorContainer';
 import { images } from '../../utils/images';
 import { SocialMediaLinkKey, socialMediaLinks } from '../../utils/navigation';
+import { useTheme } from '../../Contexts/ThemeContext';
 
-interface Props {
-	theme: DisplayMode;
-}
-
-const About = (props: Props) => {
-	const { theme } = props;
+const About = () => {
+	const { theme } = useTheme();
 
 	return (
-		<PageBodyContainer theme={theme}>
-			<DualColorContainer theme={theme} flip>
+		<PageBodyContainer>
+			<DualColorContainer flip>
 				<div className='flex-col sm:flex-row   flex items-center justify-evenly'>
 					<img
 						src={images['band-pic-water.jpg']}

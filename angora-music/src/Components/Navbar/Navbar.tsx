@@ -5,23 +5,18 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { ImCross } from 'react-icons/im';
 import { FaRegMoon, FaRegSun } from 'react-icons/fa';
 import { images } from '../../utils/images';
-import { DisplayMode } from '../../types/display';
 import { GlobalNavLinkKey, globalNavLinks } from '../../utils/navigation';
 import { NamedLink } from '../../types/navigation';
 import MobileSlidingMenu from './MobileSlidingMenu';
+import { useTheme } from '../../Contexts/ThemeContext';
 
 const navLinks: NamedLink[] = Object.keys(globalNavLinks).map((key) => ({
 	text: key.toUpperCase(),
 	link: globalNavLinks[key as GlobalNavLinkKey],
 }));
 
-interface Props {
-	theme: DisplayMode;
-	setTheme: React.Dispatch<React.SetStateAction<DisplayMode>>;
-}
-
-const Navbar = (props: Props) => {
-	const { theme, setTheme } = props;
+const Navbar = () => {
+	const { theme, setTheme } = useTheme();
 	const location = useLocation();
 
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

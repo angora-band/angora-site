@@ -1,19 +1,12 @@
 import React from 'react';
-import { DisplayMode } from '../../types/display';
 import PageBodyContainer from '../../Components/Containers/PageBodyContainer';
 // import { SingleLiveShow, liveShows } from '../../utils/live';
 import DualColorContainer from '../../Components/Containers/DualColorContainer';
 
-interface Props {
-	theme: DisplayMode;
-}
-
-const Live = (props: Props) => {
-	const { theme } = props;
-
+const Live = () => {
 	return (
-		<PageBodyContainer theme={theme}>
-			<DualColorContainer theme={theme}>
+		<PageBodyContainer>
+			<DualColorContainer>
 				<div className='flex flex-col justify-center items-center'>
 					<p className='text-4xl lg:text-8xl   flex mx-auto'>COMING SOON</p>
 					<p className='text-xl lg:text-2xl   flex mx-auto'>Stay tuned...</p>

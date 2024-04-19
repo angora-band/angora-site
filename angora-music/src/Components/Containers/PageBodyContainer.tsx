@@ -1,14 +1,14 @@
 import React, { PropsWithChildren } from 'react';
-import { DisplayMode } from '../../types/display';
 import Footer from '../Footer/Footer';
+import { useTheme } from '../../Contexts/ThemeContext';
 
 interface Props extends PropsWithChildren {
-	theme: DisplayMode;
 	simpleFooter?: boolean;
 }
 
 const PageBodyContainer = (props: Props) => {
-	const { theme, simpleFooter, children } = props;
+	const { theme } = useTheme();
+	const { simpleFooter, children } = props;
 
 	return (
 		<div

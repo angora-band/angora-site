@@ -1,20 +1,13 @@
 import React from 'react';
-import { DisplayMode } from '../../types/display';
 import DualColorContainer from '../../Components/Containers/DualColorContainer';
 import { images } from '../../utils/images';
 import { StreamingPlatformLinkKey, streamingPlatformLinks } from '../../utils/navigation';
 import PageBodyContainer from '../../Components/Containers/PageBodyContainer';
 
-interface Props {
-	theme: DisplayMode;
-}
-
-const Home = (props: Props) => {
-	const { theme } = props;
-
+const Home = () => {
 	return (
-		<PageBodyContainer theme={theme} simpleFooter>
-			<DualColorContainer theme={theme}>
+		<PageBodyContainer simpleFooter>
+			<DualColorContainer>
 				<div className='gap-12 lg:gap-20   flex-col lg:flex-row   flex items-center'>
 					<img
 						src={images['in-the-static-ep-cover.jpg']}

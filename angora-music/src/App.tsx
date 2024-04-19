@@ -1,40 +1,39 @@
-import React, { useState, ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { DisplayMode } from './types/display';
-import { getCookieByName, themeCookieName } from './utils/cookies';
 import { GlobalNavLinkKey, globalNavLinks } from './utils/navigation';
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Videos from './Pages/Videos';
 import Live from './Pages/Live';
+import { ThemeProvider } from './Contexts/ThemeContext';
 
 const App = () => {
-	const startingTheme = getCookieByName(themeCookieName);
-	const [theme, setTheme] = useState<DisplayMode>((startingTheme ?? 'dark') as DisplayMode);
 
 	const getComponent = (navKey: GlobalNavLinkKey): ReactElement => {
 		switch (navKey) {
 			case 'home':
-				return <Home theme={theme} />;
+				return <Home />;
 			case 'about':
-				return <About theme={theme} />;
+				return <About />;
 			case 'videos':
-				return <Videos theme={theme} />;
+				return <Videos />;
 			case 'live':
-				return <Live theme={theme} />;
+				return <Live />;
 		}
 	};
 
 	return (
-		<BrowserRouter>
-			<Navbar theme={theme} setTheme={setTheme} />
-			<Routes>
-				{Object.keys(globalNavLinks).map((key) => (
-					<Route path={globalNavLinks[key as GlobalNavLinkKey]} element={getComponent(key as GlobalNavLinkKey)} />
-				))}
-			</Routes>
-		</BrowserRouter>
+		<ThemeProvider>
+			<BrowserRouter>
+				<Navbar />
+				<Routes>
+					{Object.keys(globalNavLinks).map((key) => (
+						<Route path={globalNavLinks[key as GlobalNavLinkKey]} element={getComponent(key as GlobalNavLinkKey)} />
+					))}
+				</Routes>
+			</BrowserRouter>
+		</ThemeProvider>
 	);
 };
 

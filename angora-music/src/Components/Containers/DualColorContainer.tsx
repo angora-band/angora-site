@@ -1,14 +1,14 @@
 import React, { PropsWithChildren, useCallback } from 'react';
-import { DisplayMode } from '../../types/display';
+import { useTheme } from '../../Contexts/ThemeContext';
 
 interface Props extends PropsWithChildren {
-	theme: DisplayMode;
 	flip?: boolean;
 }
 
 // if this doesn't end up getting used, remember to remove the border color classes from the tailwind safelist
 const DualColorContainer = (props: Props) => {
-	const { theme, flip, children } = props;
+	const { theme } = useTheme();
+	const { flip, children } = props;
 
 	const getBorderColorClass = useCallback(
 		(whichColor: 1 | 2) => {

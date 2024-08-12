@@ -1,19 +1,12 @@
 import React from 'react';
 import PageBodyContainer from '../../Components/Containers/PageBodyContainer';
-// import { SingleLiveShow, liveShows } from '../../utils/live';
+import { SingleLiveShow, liveShows } from '../../utils/live';
 import DualColorContainer from '../../Components/Containers/DualColorContainer';
 
 const Live = () => {
 	return (
 		<PageBodyContainer>
-			<DualColorContainer>
-				<div className='flex flex-col justify-center items-center'>
-					<p className='text-4xl lg:text-8xl   flex mx-auto'>COMING SOON</p>
-					<p className='text-xl lg:text-2xl   flex mx-auto'>Stay tuned...</p>
-				</div>
-			</DualColorContainer>
-			{/* STRUCTURE FOR WHEN LIVE SHOWS ARE READY: */}
-			{/* {liveShows.map((live, ind) => {
+			{liveShows.map((live, ind) => {
 				const tourDatePairs: (SingleLiveShow | SingleLiveShow[])[] = [];
 				if (live.type === 'tour') {
 					for (let i = 0; i < live.locations.length; i += 2) {
@@ -25,7 +18,7 @@ const Live = () => {
 					}
 				}
 				return (
-					<DualColorContainer theme={theme} flip={ind % 2 === 1}>
+					<DualColorContainer flip={ind % 2 === 1}>
 						<div className='gap-6 lg:gap-12   flex flex-col'>
 							<p className='text-4xl lg:text-6xl   flex justify-center text-center'>{live.name}</p>
 							{live.type === 'single' && (
@@ -39,9 +32,9 @@ const Live = () => {
 											href={live.ticketLink}
 											target='_blank'
 											rel='noopener noreferrer'
-											className='text-sm lg:text-lg   flex justify-center text-center underline'
+											className='text-2xl lg:text-4xl   flex justify-center text-center font-bold underline'
 										>
-											Tickets
+											TICKETS
 										</a>
 									)}
 								</div>
@@ -62,7 +55,7 @@ const Live = () => {
 															{show.location} - {show.dateTime}
 														</p>
 														{show.ticketLink && (
-															<p className='text-xs lg:text-sm   flex'>
+															<p className='text-2xl lg:text-4xl   flex font-bold'>
 																(
 																<a
 																	href={show.ticketLink}
@@ -70,7 +63,7 @@ const Live = () => {
 																	rel='noopener noreferrer'
 																	className='underline'
 																>
-																	Tickets
+																	TICKETS
 																</a>
 																)
 															</p>
@@ -85,7 +78,7 @@ const Live = () => {
 						</div>
 					</DualColorContainer>
 				);
-			})} */}
+			})}
 			<div className='my-8 lg:my-16   gap-4 lg:gap-8   flex flex-col'>
 				<p className='text-4xl lg:text-8xl   flex mx-auto justify-center text-center'>BOOK US</p>
 				<a

@@ -32,7 +32,7 @@ export const liveShows: (SingleLiveShow | TourLiveShow)[] = [
     },
     {
         type: 'single',
-        name: "Rachel Despard's Album Release Show with angora, Shmay, and Riese",
+        name: "Rachel Despard Album Release Show",
         location: 'Berlin: 25 Avenue A, New York, NY 10009',
         dateTime: new Date(2024, 9, 20, 19),
         ticketLink: 'https://www.ticketweb.com/event/rachel-despard-angora-shmay-berlin-tickets/13865923',

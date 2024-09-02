@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PageBodyContainer from '../../Components/Containers/PageBodyContainer';
-import { SingleLiveShow, liveShows } from '../../utils/live';
+import { SingleLiveShow, dateFormat, liveShows } from '../../utils/live';
 import DualColorContainer from '../../Components/Containers/DualColorContainer';
+import moment from 'moment';
 
 const Live = () => {
+	const futureShows = useMemo(() => {
+		return liveShows.filter(show => {
+			if (show.type === 'single') {
+				return show.dateTime >= new Date();
+			} else {
+				return show.locations.some(single => single.dateTime >= new Date());
+			}
+		})
+	}, []);
 	return (
 		<PageBodyContainer>
-			{liveShows.map((live, ind) => {
+			{futureShows.length > 0 && futureShows.map((live, ind) => {
 				const tourDatePairs: (SingleLiveShow | SingleLiveShow[])[] = [];
 				if (live.type === 'tour') {
 					for (let i = 0; i < live.locations.length; i += 2) {
@@ -26,7 +36,9 @@ const Live = () => {
 									<p className='text-xl lg:text-2xl   flex justify-center text-center font-semibold'>
 										{live.location}
 									</p>
-									<p className='text-xl lg:text-2xl   flex justify-center text-center'>{live.dateTime}</p>
+									<p className='text-xl lg:text-2xl   flex justify-center text-center'>
+										{moment(live.dateTime).format(dateFormat)}
+									</p>
 									{live.ticketLink && (
 										<a
 											href={live.ticketLink}
@@ -52,7 +64,7 @@ const Live = () => {
 												{(Array.isArray(showPair) ? showPair : [showPair]).map((show) => (
 													<div className='gap-1 lg:gap-2   flex flex-row items-center'>
 														<p className='text-xl lg:text-2xl   flex'>
-															{show.location} - {show.dateTime}
+															{show.location} - {moment(show.dateTime).format(dateFormat)}
 														</p>
 														{show.ticketLink && (
 															<p className='text-2xl lg:text-4xl   flex font-bold'>
@@ -79,6 +91,14 @@ const Live = () => {
 					</DualColorContainer>
 				);
 			})}
+			{futureShows.length === 0 && (
+				<DualColorContainer>
+					<div className='flex flex-col justify-center items-center'>
+						<p className='text-4xl lg:text-8xl   flex mx-auto'>MORE SHOWS COMING SOON</p>
+						<p className='text-xl lg:text-2xl   flex mx-auto'>Stay tuned...</p>
+					</div>
+				</DualColorContainer>
+			)}
 			<div className='my-8 lg:my-16   gap-4 lg:gap-8   flex flex-col'>
 				<p className='text-4xl lg:text-8xl   flex mx-auto justify-center text-center'>BOOK US</p>
 				<a

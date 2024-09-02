@@ -1,20 +1,13 @@
 import React from 'react';
 import PageBodyContainer from '../../Components/Containers/PageBodyContainer';
-// import { videos } from '../../utils/videos';
+import { videos } from '../../utils/videos';
 import DualColorContainer from '../../Components/Containers/DualColorContainer';
 
 const Videos = () => {
 	return (
 		<PageBodyContainer>
-			<DualColorContainer>
-				<div className='flex flex-col justify-center items-center'>
-					<p className='text-4xl lg:text-8xl   flex mx-auto'>COMING SOON</p>
-					<p className='text-xl lg:text-2xl   flex mx-auto'>Stay tuned...</p>
-				</div>
-			</DualColorContainer>
-			{/* STRUCTURE FOR WHEN VIDEOS ARE READY: */}
-			{/* {videos.map((video, ind) => (
-				<DualColorContainer theme={theme} flip={ind % 2 === 1}>
+			{videos.map((video, ind) => (
+				<DualColorContainer flip={ind % 2 === 1}>
 					<iframe
 						className='w-[19.2rem] lg:w-[38.4rem]   h-[10.8rem] lg:h-[21.6rem]   mx-auto'
 						src={video.link}
@@ -27,7 +20,7 @@ const Videos = () => {
 						{video.title}
 					</p>
 				</DualColorContainer>
-			))} */}
+			))}
 		</PageBodyContainer>
 	);
 };

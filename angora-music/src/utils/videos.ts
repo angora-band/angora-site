@@ -1,14 +1,22 @@
 export const videos: { title: string; link: string; }[] = [
     {
-        title: 'Rickroll',
-        link: 'https://www.youtube.com/embed/dQw4w9WgXcQ?si=P7SYQ_Ui3CrWzxpA'
+        title: 'foreign city live at Trans Pecos 8/21/24',
+        link: 'https://www.youtube.com/embed/UoIdsGEjX1A?si=F0aSnyyd4TmoVLs3',
     },
     {
-        title: 'yee',
-        link: 'https://www.youtube.com/embed/q6EoRBvdVPQ?si=EqMmHzsj3WGBmy91'
+        title: 'virginia creeper live at Trans Pecos 8/21/24',
+        link: 'https://www.youtube.com/embed/2wBDtadgAIk?si=krolAcy0glQPJB7q',
     },
     {
-        title: 'Ultimate Showdown of Ultimate Destiny Anniversary Collab',
-        link: 'https://www.youtube.com/embed/hGtbr-ZvdT0?si=xlaFGIDEOSXunAVM'
+        title: 'siren song live at Trans Pecos 8/21/24',
+        link: 'https://www.youtube.com/embed/-zAhlq92ICs?si=Z7nZIBuLbC4glHB9',
+    },
+    {
+        title: 'I hear you now live at Trans Pecos 8/21/24',
+        link: 'https://www.youtube.com/embed/ZFKVqp4tWTg?si=JyITe9VSHQNDM2_y',
+    },
+    {
+        title: 'red stars live at Trans Pecos 8/21/24',
+        link: 'https://www.youtube.com/embed/Qm6ZpGMJq-g?si=-WCauxddHaQIDvpu',
     }
 ];

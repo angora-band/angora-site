@@ -10,15 +10,15 @@ const Home = () => {
 			<DualColorContainer>
 				<div className='gap-12 lg:gap-20   flex-col lg:flex-row   flex items-center'>
 					<img
-						src={images['in-the-static-ep-cover.jpg']}
+						src={images['red-stars-cover.png']}
 						alt='EP cover for "in the static"'
 						className='w-3/4 lg:w-1/3   h-3/4 lg:h-1/3   flex'
 					/>
 					<div className='gap-4 lg:gap-8   flex flex-col'>
-						<p className='text-4xl lg:text-6xl   font-semibold'> in the static </p>
-						<p className='text-lg lg:text-2xl'>
-							One new band. Five new songs. Available on all streaming platforms now. Long Live The Rabbit.
-						</p>
+						<p className='text-4xl lg:text-6xl   font-semibold'> red stars </p>
+						<a href='https://distrokid.com/hyperfollow/angora2/red-stars' className='text-lg lg:text-2xl   underline'>
+							out 2/14, presave now
+						</a>
 						<br/>
 					</div>
 				</div>
